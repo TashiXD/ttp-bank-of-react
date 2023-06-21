@@ -1,6 +1,6 @@
 import React from "react";
 
-const Credit=()=>{
+const Credit=(props)=>{
     return(
         <h1>Credit</h1>
     );
