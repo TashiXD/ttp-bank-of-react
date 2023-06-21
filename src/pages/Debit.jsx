@@ -11,7 +11,7 @@ const Debit = ({debit, setDebit, debitHistory, setDebitHistory, date, setDate}) 
   const handleSubmit = (event) => {
     event.preventDefault(); //prevents default form to be submitted
     // Getting the values from the input fields
-    const enteredAmount = parseInt(event.target.amountEntered.value);
+    const enteredAmount = parseFloat(event.target.amountEntered.value);
     const enteredDescription = event.target.descriptionEntered.value;
 
     if (enteredAmount && enteredDescription) {
@@ -39,7 +39,7 @@ const Debit = ({debit, setDebit, debitHistory, setDebitHistory, date, setDate}) 
     <div>
       <h1>Debit</h1>
       <form onSubmit={handleSubmit}>
-        <input  type="number" name="amountEntered" placeholder="Enter Amount" /><br/>
+        <input  type="float" name="amountEntered" placeholder="Enter Amount" /><br/>
         <input type="text" name="descriptionEntered" placeholder="Enter description"/><br/>
         <input type="submit" value="Submit" />
       </form>
