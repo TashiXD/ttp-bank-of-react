@@ -7,7 +7,7 @@ function Display({ debitHistory }) {
         <div key={index}>
           <h4>Amount: ${transaction.amount}</h4>
           <h4>Description: {transaction.description}</h4>
-          <h4>{transaction.time}</h4>
+          <h4>{transaction.date} at {transaction.time}</h4>
         </div>
       ))}
     </div>

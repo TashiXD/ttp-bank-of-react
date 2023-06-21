@@ -1,16 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Display from "../components/Display/Display";
-const Debit = ({debit, setDebit, debitHistory, setDebitHistory}) => {
-const [date, setDate] = useState(new Date());
-// //adding to arr
-//   const addToHistory=()=>{
-//     const newTransaction = {
-//         amount: amount,
-//         description: description,
-//         time: date.toLocaleTimeString()
-//       };
-//     setHistory([...history, newTransaction]);
-//   }
+
+const Debit = ({debit, setDebit, debitHistory, setDebitHistory, date, setDate}) => {
+
   //this sets date
   useEffect(() => {
     setDate(new Date());
@@ -30,6 +22,7 @@ const [date, setDate] = useState(new Date());
         const newTransaction = {
           amount: enteredAmount,
           description: enteredDescription,
+          date: `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`,
           time: date.toLocaleTimeString(),
         };
     
