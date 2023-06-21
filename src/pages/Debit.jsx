@@ -44,7 +44,6 @@ const Debit = ({debit, setDebit, debitHistory, setDebitHistory, date, setDate}) 
         <input type="submit" value="Submit" />
       </form>
       <div className="display">
-        {console.log(debit)}
         <Display history={debitHistory}/>
       </div>
     </div>

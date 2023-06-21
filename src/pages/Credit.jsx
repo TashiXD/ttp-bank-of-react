@@ -43,7 +43,6 @@ const Credit=({credit, setCredit, creditHistory, setCreditHistory, date, setDate
         <input type="submit" value="Submit" />
       </form>
       <div className="display">
-        {console.log(credit)}
         <Display history={creditHistory}/>
       </div>
     </div>
