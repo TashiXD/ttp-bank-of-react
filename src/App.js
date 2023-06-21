@@ -42,7 +42,9 @@ function App() {
       setCredit(creditResponse.data);
     }
     fetchData();
-  });
+  },[]);
+  
+  console.log(debit);
 
   return (
     <Router>
