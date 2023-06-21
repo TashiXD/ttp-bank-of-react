@@ -13,6 +13,8 @@ function App() {
    * account Number
    * debit balance
    * credit balance
+   * debit history
+   * credit history
    * Date
    * time
    */
@@ -21,6 +23,7 @@ function App() {
   const [debit, setDebit] = useState(0);
   const [credit, setCredit] = useState(0);
   const [debitHistory, setDebitHistory] = useState([]);
+  const [creditHistory, setCreditHistory] = useState([]);
   const [date, setDate] = useState(new Date());
 
   useEffect(() => {
@@ -75,7 +78,16 @@ function App() {
         />
         <Route
           path="/userProfile/credit"
-          element={<Credit credit={credit} setCredit={setCredit} />}
+          element={
+            <Credit
+              credit={credit}
+              setCredit={setCredit}
+              creditHistory={creditHistory}
+              setCreditHistory={setCreditHistory}
+              date={date}
+              setDate={setDate}
+            />
+          }
         />
       </Routes>
     </Router>

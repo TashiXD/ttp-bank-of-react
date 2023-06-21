@@ -1,9 +1,9 @@
 import React from "react";
 
-function Display({ debitHistory }) {
+function Display({history}) {
   return (
     <div>
-      {debitHistory.map((transaction, index) => (
+      {history.map((transaction, index) => (
         <div key={index}>
           <h4>Amount: ${transaction.amount}</h4>
           <h4>Description: {transaction.description}</h4>

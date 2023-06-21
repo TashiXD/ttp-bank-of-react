@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Display from "../components/Display/Display";
 
 const Debit = ({debit, setDebit, debitHistory, setDebitHistory, date, setDate}) => {
@@ -45,7 +45,7 @@ const Debit = ({debit, setDebit, debitHistory, setDebitHistory, date, setDate}) 
       </form>
       <div className="display">
         {console.log(debit)}
-        <Display debitHistory={debitHistory}/>
+        <Display history={debitHistory}/>
       </div>
     </div>
   );
