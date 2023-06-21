@@ -1,6 +1,6 @@
 import React from "react";
 
-const Debit=()=>{
+const Debit=(props)=>{
     return(
         <h1>Debit</h1>
     );
