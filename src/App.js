@@ -11,6 +11,7 @@ function App() {
   const [accountNum, setAccountNum] = useState("123456789");
   const [debit, setDebit] = useState(0);
   const [credit, setCredit] = useState(0);
+  const[debitHistory, setDebitHistory] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -28,6 +29,7 @@ function App() {
     }
     fetchData();
   });
+
   return (
     <Router>
       <div className="App">
@@ -48,7 +50,7 @@ function App() {
             />
           }
         />
-        <Route path="/userProfile/debit" element={<Debit debit={debit} setDebit={setDebit}/>} />
+        <Route path="/userProfile/debit" element={<Debit debit={debit} setDebit={setDebit} debitHistory={debitHistory} setDebitHistory={setDebitHistory}/>} />
         <Route path="/userProfile/credit" element={<Credit credit={credit} setCredit={setCredit} />} />
       </Routes>
     </Router>
