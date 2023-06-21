@@ -1,16 +1,20 @@
+
 .display{
-    
     display:flex;
-    justify-content:center ;
 }
 
 h4{
     display: inline;
+    text-align: center;
     margin:0.5em;
-    width: 50%;
 }
 
 .history{
+    padding-left:1em;
+    padding-right: 1em;
+    margin:0;
     border:1px solid black;
-    border-width: 100%;
+    background-color: antiquewhite;
+    width: 30em;
+    margin-bottom: 0.4em;
 }
