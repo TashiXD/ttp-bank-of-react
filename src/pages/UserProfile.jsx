@@ -5,7 +5,7 @@ const UserProfile = (props) => {
 
   useEffect(()=>{
     function calculateTotal(){
-        setTotal(props.debit-props.credit)
+        setTotal(props.credit-props.debit)
     }
 
     calculateTotal();

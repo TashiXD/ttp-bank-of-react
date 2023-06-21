@@ -16,7 +16,7 @@ const Debit = ({debit, setDebit, debitHistory, setDebitHistory, date, setDate}) 
 
     if (enteredAmount && enteredDescription) {
         // Update the debit value in the parent component
-        setDebit(debit - enteredAmount);
+        setDebit(debit + enteredAmount);
     
         // Create a new transaction object
         const newTransaction = {
@@ -37,9 +37,9 @@ const Debit = ({debit, setDebit, debitHistory, setDebitHistory, date, setDate}) 
 
   return (
     <div>
-      <h1>Debit</h1>
+      <h1>Debit Balance: ${debit}</h1>
       <form onSubmit={handleSubmit}>
-        <input  type="float" name="amountEntered" placeholder="Enter Amount" /><br/>
+        <input  type="float" name="amountEntered" placeholder="Enter Amount to add" /><br/>
         <input type="text" name="descriptionEntered" placeholder="Enter description"/><br/>
         <input type="submit" value="Submit" />
       </form>
