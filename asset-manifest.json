@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ttp-bank-of-reacts/static/css/main.a1635ca1.css",
-    "main.js": "/ttp-bank-of-reacts/static/js/main.d258059b.js",
-    "static/js/787.cd58fa09.chunk.js": "/ttp-bank-of-reacts/static/js/787.cd58fa09.chunk.js",
-    "index.html": "/ttp-bank-of-reacts/index.html",
-    "main.a1635ca1.css.map": "/ttp-bank-of-reacts/static/css/main.a1635ca1.css.map",
-    "main.d258059b.js.map": "/ttp-bank-of-reacts/static/js/main.d258059b.js.map",
-    "787.cd58fa09.chunk.js.map": "/ttp-bank-of-reacts/static/js/787.cd58fa09.chunk.js.map"
+    "main.css": "/ttp-bank-of-react/static/css/main.a1635ca1.css",
+    "main.js": "/ttp-bank-of-react/static/js/main.001c0506.js",
+    "static/js/787.cd58fa09.chunk.js": "/ttp-bank-of-react/static/js/787.cd58fa09.chunk.js",
+    "index.html": "/ttp-bank-of-react/index.html",
+    "main.a1635ca1.css.map": "/ttp-bank-of-react/static/css/main.a1635ca1.css.map",
+    "main.001c0506.js.map": "/ttp-bank-of-react/static/js/main.001c0506.js.map",
+    "787.cd58fa09.chunk.js.map": "/ttp-bank-of-react/static/js/787.cd58fa09.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a1635ca1.css",
-    "static/js/main.d258059b.js"
+    "static/js/main.001c0506.js"
   ]
 }
