@@ -3,7 +3,8 @@ import axios from "axios";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //import components
-import Navbar from "./components/Navbar/Navbar";
+import { Navbar } from "./components";
+
 //import pages
 import { Credit, Debit, Home, UserProfile } from "./pages";
 function App() {

@@ -1,12 +1,7 @@
 import React, { useEffect } from "react";
-import Display from "../components/Display/Display";
-
+import { Display, Form } from "../components";
+import "./transaction.css"
 const Debit = ({debit, setDebit, debitHistory, setDebitHistory, date, setDate}) => {
-
-  //this sets date
-  useEffect(() => {
-    setDate(new Date());
-  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault(); //prevents default form to be submitted
@@ -17,7 +12,7 @@ const Debit = ({debit, setDebit, debitHistory, setDebitHistory, date, setDate}) 
     if (enteredAmount && enteredDescription) {
         // Update the debit value in the parent component
         setDebit(debit + enteredAmount);
-    
+        setDate(new Date());
         // Create a new transaction object
         const newTransaction = {
           amount: enteredAmount,
@@ -36,13 +31,10 @@ const Debit = ({debit, setDebit, debitHistory, setDebitHistory, date, setDate}) 
   };
 
   return (
-    <div>
+    <div className="main">
       <h1>Debit Balance: ${debit}</h1>
-      <form onSubmit={handleSubmit}>
-        <input  type="float" name="amountEntered" placeholder="Enter Amount to add" /><br/>
-        <input type="text" name="descriptionEntered" placeholder="Enter description"/><br/>
-        <input type="submit" value="Submit" />
-      </form>
+      <Form handleSubmit={handleSubmit}/>
+      <h2>Transaction History</h2>
       <div className="display">
         <Display history={debitHistory}/>
       </div>

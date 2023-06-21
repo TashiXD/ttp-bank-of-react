@@ -1,11 +1,7 @@
-import React, { useEffect } from "react";
-import Display from "../components/Display/Display";
-
+import React, { useEffect, useState } from "react";
+import { Display, Form } from "../components";
+import "./transaction.css"
 const Credit=({credit, setCredit, creditHistory, setCreditHistory, date, setDate})=>{
-     //this sets date
-  useEffect(() => {
-    setDate(new Date());
-  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault(); //prevents default form to be submitted
@@ -14,9 +10,8 @@ const Credit=({credit, setCredit, creditHistory, setCreditHistory, date, setDate
     const enteredDescription = event.target.descriptionEntered.value;
 
     if (enteredAmount && enteredDescription) {
-        // Update the debit value in the parent component
-        setCredit(credit + enteredAmount);
-
+        setCredit(credit+enteredAmount);
+        setDate(new Date());
         // Create a new transaction object
         const newTransaction = {
           amount: enteredAmount,
@@ -27,21 +22,18 @@ const Credit=({credit, setCredit, creditHistory, setCreditHistory, date, setDate
     
         // Add the new transaction to the history
         setCreditHistory([...creditHistory, newTransaction]);
-    
         // Clear the input fields
         event.target.amountEntered.value = "";
         event.target.descriptionEntered.value = "";
       }
+
   };
 
   return (
-    <div>
+    <div className="main">
       <h1>Credit Balance: ${credit}</h1>
-      <form onSubmit={handleSubmit}>
-        <input  type="float" name="amountEntered" placeholder="Enter Amount to add" /><br/>
-        <input type="text" name="descriptionEntered" placeholder="Enter description"/><br/>
-        <input type="submit" value="Submit" />
-      </form>
+      <Form handleSubmit={handleSubmit}/>
+      <h2>Transaction History</h2>
       <div className="display">
         <Display history={creditHistory}/>
       </div>

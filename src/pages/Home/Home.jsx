@@ -14,7 +14,7 @@ function Home({user}) {
   }
   return (
     <div className='home'>
-      <h1 className='welcome'>Welcome to bank of react</h1>
+      <h1 className='welcome'>Welcome to <span className='bank'>Bank of React</span></h1>
       <h1 className='user'>{user}</h1>
       <div className="view">
         <p>Check account type</p>
