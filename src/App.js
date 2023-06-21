@@ -7,11 +7,21 @@ import Navbar from "./components/Navbar";
 //import pages
 import { Credit, Debit, Home, UserProfile } from "./pages";
 function App() {
+  /**
+   * State:
+   * Name
+   * account Number
+   * debit balance
+   * credit balance
+   * Date
+   * time
+   */
   const [user, setUser] = useState("Tashi");
   const [accountNum, setAccountNum] = useState("123456789");
   const [debit, setDebit] = useState(0);
   const [credit, setCredit] = useState(0);
-  const[debitHistory, setDebitHistory] = useState([]);
+  const [debitHistory, setDebitHistory] = useState([]);
+  const [date, setDate] = useState(new Date());
 
   useEffect(() => {
     async function fetchData() {
@@ -50,8 +60,23 @@ function App() {
             />
           }
         />
-        <Route path="/userProfile/debit" element={<Debit debit={debit} setDebit={setDebit} debitHistory={debitHistory} setDebitHistory={setDebitHistory}/>} />
-        <Route path="/userProfile/credit" element={<Credit credit={credit} setCredit={setCredit} />} />
+        <Route
+          path="/userProfile/debit"
+          element={
+            <Debit
+              debit={debit}
+              setDebit={setDebit}
+              debitHistory={debitHistory}
+              setDebitHistory={setDebitHistory}
+              date={date}
+              setDate={setDate}
+            />
+          }
+        />
+        <Route
+          path="/userProfile/credit"
+          element={<Credit credit={credit} setCredit={setCredit} />}
+        />
       </Routes>
     </Router>
   );
